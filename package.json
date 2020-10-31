@@ -1,0 +1,39 @@
+{
+  "name": "ktr",
+  "version": "1.0.0",
+  "description": "",
+   "workbox": {
+    "importScripts": "./worker.js",
+    "globDirectory": "./dist",
+    "globPatterns": "**/*.{css,html,gif,js,jpg,png,svg,webp}"
+  },
+  "pwaManifest": {
+     "name": "My Awesome PWA",
+     "shortName": "My PWA",
+     "startURL": "./offline",
+     "theme": "#add8e6",
+     "generateIconOptions": {
+      "baseIcon": "./ktu.svg",
+      "sizes": [192, 384, 512],
+      "genFavicons": true
+    }
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.6",
+    "parcel-plugin-workbox": "^0.2.0",
+    "svelte": "^3.29.4"
+  },
+  "dependencies": {
+    "parcel-plugin-pwa-manifest": "^3.0.10"
+  }
+}
